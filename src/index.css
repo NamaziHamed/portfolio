@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: #000 !important;
+    color: white !important;
+}
+
+.text-green{
+    color: #d4ff00;
+}
+
+.full-page{
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(10px); /* Optional movement */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
