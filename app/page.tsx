@@ -1,4 +1,9 @@
+import Hero from "@/components/landing/Hero";
 
 export default function Home() {
-  return <div>Home</div>;
+  return (
+    <main>
+      <Hero />
+    </main>
+  );
 }

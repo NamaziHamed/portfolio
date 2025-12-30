@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Outfit, Roboto } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/landing/Header";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -25,6 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${outfit.variable} ${roboto.variable} antialiased`}>
+        <Header />
         {children}
       </body>
     </html>

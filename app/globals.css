@@ -123,3 +123,8 @@
     @apply bg-gray-900 text-gray-100 min-w-screen min-h-screen h-full w-full;
   }
 }
+@layer utilities {
+  .nav-divider:not(:last-child) {
+    @apply border-r border-gray-600 pr-3;
+  }
+}
