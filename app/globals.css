@@ -121,11 +121,14 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground min-w-screen min-h-screen h-full w-full;
+    @apply bg-background text-foreground min-w-screen min-h-screen h-full w-full scroll-smooth;
   }
 }
 @layer utilities {
   .nav-divider:not(:last-child) {
     @apply border-r border-gray-600 pr-3;
+  }
+  .heading {
+    @apply font-outfit font-semibold text-2xl md:text-3xl lg:text-4xl xl:text-5xl;
   }
 }
