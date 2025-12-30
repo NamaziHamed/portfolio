@@ -1,17 +1,39 @@
+"use client";
 import Image from "next/image";
 import SectionWrapper from "./SectionWrapper";
 import NavMenu from "./NavMenu";
+import { useEffect, useState } from "react";
+import { cn } from "@/lib/utils";
 
 export default function Header() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 200) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="bg-gray-800 opacity-80 h-32  flex items-center justify-center w-full">
+    <header
+      className={cn(
+        "bg-gray-900/80 flex items-center justify-center w-full transition-all duration-300 ease-in-out fixed top-0 z-50",
+        scrolled ? "drop-shadow-md h-24" : "h-32"
+      )}
+    >
       <SectionWrapper className="w-full flex items-center justify-between">
         <div className="flex gap-4 items-center justify-between">
           <Image
             src={"/avatar.png"}
             alt="portfolio avatar"
-            width={75}
-            height={75}
+            width={scrolled ? 75 : 100}
+            height={scrolled ? 75 : 100}
             className="rounded-md"
           />
           <h1
