@@ -1,7 +1,7 @@
 import { Container, LayoutDashboard, Server } from "lucide-react";
-import SectionWrapper from "./SectionWrapper";
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
-import { Badge } from "../ui/badge";
+import SectionWrapper from "../miniComponents/SectionWrapper";
+import { Card, CardContent, CardHeader, CardTitle } from "../../ui/card";
+import { Badge } from "../../ui/badge";
 
 interface Tech {
   title: string;
@@ -21,9 +21,12 @@ export default function TechStack() {
         "Tailwind CSS",
         "Shadcn UI",
         "Zustand",
-        "React Query",
+        "TanStack Query",
+        "TanStack Table",
+        "React Hook Form",
         "Framer Motion",
-        "Figma",
+        "TipTap Editor",
+        "Luxon",
       ],
     },
     {
@@ -32,14 +35,15 @@ export default function TechStack() {
       list: [
         "Node.js",
         "Express",
-        "Next.js",
-        "Prisma",
-        "REST APIs",
+        "Next.js API Routes",
         "PostgreSQL",
         "MongoDB",
+        "Prisma ORM",
         "Supabase",
         "Payload CMS",
         "Auth.js",
+        "Zod Validation",
+        "Bcryptjs",
       ],
     },
     {
@@ -49,7 +53,10 @@ export default function TechStack() {
     },
   ];
   return (
-    <SectionWrapper id="techs" className="flex flex-col space-y-8 min-h-150">
+    <SectionWrapper
+      id="techs"
+      className="flex flex-col space-y-8 min-h-150  scroll-mt-26"
+    >
       <h2 className="heading">Tech Stack</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
         {techStack.map((tech) => (

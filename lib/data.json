@@ -1,0 +1,42 @@
+{
+  "data": [
+    {
+      "title": "Apex Agenda",
+      "description": "A user based task management web applications with categorization, deadlines. Tasks with due date automatically gets added to today list",
+      "imageUrl": "/apexagenda.png",
+      "techStack": [
+        "Next.js 15",
+        "TypeScript",
+        "TanStack Query",
+        "React Hook Form",
+        "Zustand",
+        "Prisma ORM",
+        "PostgreSQL",
+        "Auth.js"
+      ],
+      "projectLinks": {
+        "github": "https://github.com/NamaziHamed/apex-agenda-mk1",
+        "liveDemo": "https://apex-agenda-v1.vercel.app"
+      }
+    },
+    {
+      "title": "Parch",
+      "description": "Note Taking application with authentication and automatic saves. Built with TipTap editor for rich text editing experience. Supports headings, lists, colors, justification and more. Notes are searchanble based on both title and content.",
+      "imageUrl": "/parch.png",
+      "techStack": [
+        "Next.js 15",
+        "TypeScript",
+        "TipTap",
+        "React Masonry CSS",
+        "Prisma ORM",
+        "PostgreSQL",
+        "Auth.js"
+      ],
+
+      "projectLinks": {
+        "github": "https://github.com/NamaziHamed/parch",
+        "liveDemo": "https://parch-note-app.vercel.app"
+      }
+    }
+  ]
+}

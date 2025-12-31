@@ -3,13 +3,12 @@ import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuList,
-} from "../ui/navigation-menu";
+} from "../../ui/navigation-menu";
 import Link from "next/link";
 
 const navMenuItems = [
   { title: "Tech Stack", href: "#techs" },
   { title: "Projects", href: "#projects" },
-  { title: "About", href: "#about" },
   { title: "Contact", href: "#contact" },
 ];
 export default function NavMenu() {
@@ -21,6 +20,12 @@ export default function NavMenu() {
             <Link
               href={item.href}
               className="hover:underline hover:text-indigo-400 transition-all duration-300 ease-in-out"
+              onClick={(e) => {
+                e.preventDefault();
+                document
+                  .getElementById(item.href.slice(1))
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
             >
               {item.title}
             </Link>

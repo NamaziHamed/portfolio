@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Outfit, Roboto } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/landing/Header";
+import Header from "@/components/landing/sections/Header";
+import Footer from "@/components/landing/sections/Footer";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -30,6 +31,7 @@ export default function RootLayout({
       >
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -10,7 +10,7 @@ export default function SectionWrapper({
   id?: string;
 }) {
   return (
-    <div id={id} className={`max-w-6xl p-4 mx-auto ${className}`}>
+    <div id={id} className={`max-w-6xl p-4 pr-8 mx-auto ${className}`}>
       {children}
     </div>
   );
