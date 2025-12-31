@@ -126,7 +126,7 @@
 }
 @layer utilities {
   .nav-divider:not(:last-child) {
-    @apply border-r border-gray-600 pr-3;
+    @apply border-r border-gray-600 pr-2 md:pr-3;
   }
   .heading {
     @apply font-outfit font-semibold text-2xl md:text-3xl lg:text-4xl xl:text-5xl;

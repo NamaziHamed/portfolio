@@ -19,7 +19,7 @@ export default function NavMenu() {
           <NavigationMenuItem className="nav-divider" key={item.title}>
             <Link
               href={item.href}
-              className="hover:underline hover:text-indigo-400 transition-all duration-300 ease-in-out"
+              className="hover:underline hover:text-indigo-400 text-xs md:text-sm transition-all duration-300 ease-in-out"
               onClick={(e) => {
                 e.preventDefault();
                 document

@@ -12,11 +12,11 @@ export default function Header() {
   return (
     <header
       className={cn(
-        "bg-gray-900/80 border flex items-center backdrop-blur-sm justify-center w-full transition-all duration-300 ease-in-out fixed top-0 z-50",
-        scrolled ? "drop-shadow-md h-18" : "h-36"
+        "bg-gray-900/80 border flex  items-center backdrop-blur-sm justify-center w-full transition-all duration-300 ease-in-out fixed top-0 z-50",
+        scrolled ? "drop-shadow-md h-26 md:h-18" : "h-38"
       )}
     >
-      <SectionWrapper className="w-full flex items-center justify-between">
+      <SectionWrapper className="w-full flex items-center justify-between flex-col md:flex-row gap-2 ">
         <div className="flex gap-4 items-center justify-between">
           <Image
             src={"/avatar.png"}
