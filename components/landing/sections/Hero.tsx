@@ -1,6 +1,7 @@
-import { Button } from "../../ui/button";
+
 import ScrollDown from "../miniComponents/ScrollDown";
 import SectionWrapper from "../miniComponents/SectionWrapper";
+import CTAS from "../miniComponents/CTAS";
 
 export default function Hero() {
   return (
@@ -16,14 +17,7 @@ export default function Hero() {
         Clean architecture, secure authentication, optimized databases, from
         concept to production.
       </p>
-      <div className="flex items-center gap-5">
-        <Button className="font-semibold" size={"lg"} variant={"default"}>
-          Get in touch
-        </Button>
-        <Button className="" size={"lg"} variant={"outline"}>
-          View projects
-        </Button>
-      </div>
+<CTAS />
       <ScrollDown />
     </SectionWrapper>
   );

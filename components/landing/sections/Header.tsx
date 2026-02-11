@@ -13,7 +13,7 @@ export default function Header() {
     <header
       className={cn(
         "bg-gray-900/80 border flex  items-center backdrop-blur-sm justify-center w-full transition-all duration-300 ease-in-out fixed top-0 z-50",
-        scrolled ? "drop-shadow-md h-26 md:h-18" : "h-38"
+        scrolled ? "drop-shadow-md h-26 md:h-18" : "h-38",
       )}
     >
       <SectionWrapper className="w-full flex items-center justify-between flex-col md:flex-row gap-2 ">
@@ -25,7 +25,7 @@ export default function Header() {
             height={100}
             className={cn(
               "rounded-md object-center object-cover transition-all duration-500 ease-in-out",
-              scrolled ? "w-16 h-16 rounded-full" : ""
+              scrolled ? "w-16 h-16 rounded-full" : "",
             )}
           />
           <h1
