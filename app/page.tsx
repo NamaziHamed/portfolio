@@ -1,14 +1,18 @@
-import Contact from "@/components/landing/sections/contact";
-import FeaturedProjects from "@/components/landing/sections/FeaturedProjects";
-import Hero from "@/components/landing/sections/Hero";
-import TechStack from "@/components/landing/sections/TechStack";
+import Hero from "@/components/site/Hero";
+import Work from "@/components/site/Work";
+import Experience from "@/components/site/Experience";
+import Skills from "@/components/site/Skills";
+import Education from "@/components/site/Education";
+import Contact from "@/components/site/Contact";
 
 export default function Home() {
   return (
-    <main className="overflow-x-hidden py-4 md:py-8 lg:py-12 flex flex-col gap-7">
+    <main id="main">
       <Hero />
-      <TechStack />
-      <FeaturedProjects />
+      <Work />
+      <Experience />
+      <Skills />
+      <Education />
       <Contact />
     </main>
   );

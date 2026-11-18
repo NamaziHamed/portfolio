@@ -1,23 +1,49 @@
-import type { Metadata } from "next";
-import { Outfit, Roboto } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/landing/sections/Header";
-import Footer from "@/components/landing/sections/Footer";
+import Header from "@/components/site/Header";
+import Footer from "@/components/site/Footer";
+import RevealObserver from "@/components/site/RevealObserver";
+import { profile } from "@/lib/content";
 
-const outfit = Outfit({
-  variable: "--font-outfit",
+const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
+const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-instrument-serif",
   subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
 });
 
-const roboto = Roboto({
-  variable: "--font-roboto",
-  subsets: ["latin"],
-});
+const description =
+  "Hamed Namazi, software & systems engineer. Full-stack web apps with Next.js and TypeScript, desktop tools in Tauri, and privacy-preserving cryptography in Rust.";
 
 export const metadata: Metadata = {
-  title: "Hamed Namazi - Next.js Developer",
-  description:
-    "Portfolio of Hamed Namazi, a Next.js developer specializing in building production-ready web applications with clean architecture, secure authentication, and optimized databases.",
+  metadataBase: new URL(profile.siteUrl),
+  title: {
+    default: `${profile.name} · ${profile.role}`,
+    template: `%s · ${profile.name}`,
+  },
+  description,
+  authors: [{ name: profile.fullName, url: profile.siteUrl }],
+  openGraph: {
+    type: "website",
+    url: "/",
+    title: `${profile.name} · ${profile.role}`,
+    description,
+    siteName: profile.name,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${profile.name} · ${profile.role}`,
+    description,
+    creator: "@hamednamazi7",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#0f1117",
+  colorScheme: "dark",
 };
 
 export default function RootLayout({
@@ -28,11 +54,22 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${outfit.variable} ${roboto.variable} antialiased overflow-x-hidden`}
+        className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} relative overflow-x-clip`}
       >
+        <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[52rem]">
+          <div className="glow absolute inset-0" />
+          <div className="bg-grid absolute inset-0" />
+        </div>
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:rounded-md focus:bg-primary focus:px-3 focus:py-2 focus:text-primary-foreground"
+        >
+          Skip to content
+        </a>
         <Header />
         {children}
         <Footer />
+        <RevealObserver />
       </body>
     </html>
   );
