@@ -1,4 +1,4 @@
-import { Container, LayoutDashboard, Server } from "lucide-react";
+import { Container, Cpu, LayoutDashboard, Server } from "lucide-react";
 import SectionWrapper from "../miniComponents/SectionWrapper";
 import { Card, CardContent, CardHeader, CardTitle } from "../../ui/card";
 import { Badge } from "../../ui/badge";
@@ -39,6 +39,8 @@ export default function TechStack() {
         "PostgreSQL",
         "MongoDB",
         "Prisma ORM",
+        "Drizzle ORM",
+        "SQLite",
         "Supabase",
         "Payload CMS",
         "Auth.js",
@@ -51,6 +53,17 @@ export default function TechStack() {
       icon: <Container />,
       list: ["Vercel", "Docker", "Git & GitHub", "Postman"],
     },
+    {
+      title: "Systems & Security",
+      icon: <Cpu />,
+      list: [
+        "Rust",
+        "Python",
+        "Tauri",
+        "Homomorphic Encryption",
+        "Networking & VoIP",
+      ],
+    },
   ];
   return (
     <SectionWrapper
@@ -58,7 +71,7 @@ export default function TechStack() {
       className="flex flex-col space-y-8 min-h-150  scroll-mt-26"
     >
       <h2 className="heading">Tech Stack</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         {techStack.map((tech) => (
           <Card key={tech.title}>
             <CardContent className="space-y-10">

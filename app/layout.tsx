@@ -15,9 +15,9 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Hamed Namazi - Next.js Developer",
+  title: "Hamed Namazi - Software & Systems Engineer",
   description:
-    "Portfolio of Hamed Namazi, a Next.js developer specializing in building production-ready web applications with clean architecture, secure authentication, and optimized databases.",
+    "Portfolio of Hamed Namazi, a software and systems engineer building web applications with Next.js and TypeScript, desktop tools with Tauri, and privacy-preserving systems in Rust.",
 };
 
 export default function RootLayout({

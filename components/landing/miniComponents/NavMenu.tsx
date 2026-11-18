@@ -9,6 +9,7 @@ import Link from "next/link";
 const navMenuItems = [
   { title: "Tech Stack", href: "#techs" },
   { title: "Projects", href: "#projects" },
+  { title: "Experience", href: "#experience" },
   { title: "Contact", href: "#contact" },
 ];
 export default function NavMenu() {

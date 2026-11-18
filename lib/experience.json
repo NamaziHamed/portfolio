@@ -1,0 +1,37 @@
+{
+  "data": [
+    {
+      "role": "IT & Systems Engineer",
+      "company": "Mishoosoft",
+      "period": "Feb 2026 - Present",
+      "points": [
+        "Deployed a multi-segment enterprise LAN connecting workstations to on-premise ERP servers and the internal VoIP system.",
+        "Built MishooDesk, a customised and branded RustDesk remote-support client with an automated Windows installer.",
+        "Designing and developing MSSM, a cross-platform desktop app for tracking hardware components and systems in company storage.",
+        "Developed internal web tools and Python automation scripts for daily operations."
+      ],
+      "techStack": ["Tauri", "React", "TypeScript", "Drizzle ORM", "SQLite", "Python"]
+    },
+    {
+      "role": "Co-Founder & Software Engineer",
+      "company": "zkPrivada",
+      "link": "https://zkprivada.com",
+      "period": "Jan 2025 - Present",
+      "points": [
+        "Co-leading engineering and architecture for a privacy-preserving EVM ecosystem based on recursive zero-knowledge proofs.",
+        "Leading Privara, a privacy-preserving geolocation project: two parties learn whether they are close without revealing their locations. Built an ElGamal-based Rust prototype."
+      ],
+      "techStack": ["Rust", "Python", "Homomorphic Encryption", "Next.js", "Supabase"]
+    },
+    {
+      "role": "Full-Stack Web Developer & Technical Translator",
+      "company": "Freelance",
+      "period": "2021 - Jan 2026",
+      "points": [
+        "Designed and built responsive web applications with React, Next.js, TypeScript and Tailwind CSS.",
+        "Translated peer-reviewed computer science and cryptography research papers from English into Persian."
+      ],
+      "techStack": ["React", "Next.js", "TypeScript", "Tailwind CSS"]
+    }
+  ]
+}

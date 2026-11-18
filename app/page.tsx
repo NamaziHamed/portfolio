@@ -1,3 +1,5 @@
+import Experience from "@/components/landing/sections/Experience";
+import Education from "@/components/landing/sections/Education";
 import Contact from "@/components/landing/sections/contact";
 import FeaturedProjects from "@/components/landing/sections/FeaturedProjects";
 import Hero from "@/components/landing/sections/Hero";
@@ -9,6 +11,8 @@ export default function Home() {
       <Hero />
       <TechStack />
       <FeaturedProjects />
+      <Experience />
+      <Education />
       <Contact />
     </main>
   );
