@@ -21,11 +21,11 @@ export default function CTAS() {
       </Button>
       <Button className="" size={"lg"} variant={"outline"} asChild>
         <Link
-          href="#featured-projects"
+          href="#projects"
           onClick={(e) => {
             e.preventDefault();
             document
-              .getElementById("featured-projects")
+              .getElementById("projects")
               ?.scrollIntoView({ behavior: "smooth" });
           }}
         >

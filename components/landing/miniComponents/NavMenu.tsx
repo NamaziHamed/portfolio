@@ -7,6 +7,7 @@ import {
 import Link from "next/link";
 
 const navMenuItems = [
+  { title: "Experience", href: "#experience" },
   { title: "Tech Stack", href: "#techs" },
   { title: "Projects", href: "#projects" },
   { title: "Contact", href: "#contact" },

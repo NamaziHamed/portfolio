@@ -19,11 +19,11 @@ export default function ScrollDown() {
       asChild
     >
       <Link
-        href={"#techs"}
+        href={"#experience"}
         onClick={(e) => {
           e.preventDefault();
           document
-            .getElementById("techs")
+            .getElementById("experience")
             ?.scrollIntoView({ behavior: "smooth" });
         }}
       >

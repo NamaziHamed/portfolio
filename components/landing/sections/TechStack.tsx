@@ -27,18 +27,23 @@ export default function TechStack() {
         "Framer Motion",
         "TipTap Editor",
         "Luxon",
+        "Tauri",
       ],
     },
     {
       title: "Backend",
       icon: <Server />,
       list: [
+        "Python",
+        "Rust",
         "Node.js",
         "Express",
         "Next.js API Routes",
         "PostgreSQL",
         "MongoDB",
         "Prisma ORM",
+        "Drizzle ORM",
+        "SQLite",
         "Supabase",
         "Payload CMS",
         "Auth.js",
@@ -47,9 +52,19 @@ export default function TechStack() {
       ],
     },
     {
-      title: "DevOps & Tools",
+      title: "DevOps & Systems",
       icon: <Container />,
-      list: ["Vercel", "Docker", "Git & GitHub", "Postman"],
+      list: [
+        "Vercel",
+        "Docker",
+        "Git & GitHub",
+        "Postman",
+        "Network Setup",
+        "Wireless APs",
+        "VoIP",
+        "Hardware Maintenance",
+        "ElGamal Cryptography",
+      ],
     },
   ];
   return (
@@ -60,7 +75,10 @@ export default function TechStack() {
       <h2 className="heading">Tech Stack</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
         {techStack.map((tech) => (
-          <Card key={tech.title}>
+          <Card
+            key={tech.title}
+            className="hover:border-indigo-400/40 transition-colors duration-300"
+          >
             <CardContent className="space-y-10">
               <CardHeader className="flex items-center gap-4">
                 {tech.icon}
@@ -68,7 +86,7 @@ export default function TechStack() {
                   {tech.title}
                 </CardTitle>
               </CardHeader>
-              <div className="grid grid-cols-3 md:grid-cols-2 p-4 gap-1">
+              <div className="flex flex-wrap p-4 gap-1">
                 {tech.list.map((item) => (
                   <Badge
                     variant={"outline"}

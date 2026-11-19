@@ -5,7 +5,7 @@ import projects from "@/lib/data.json";
 export default function FeaturedProjects() {
   return (
     <SectionWrapper id="projects" className="flex flex-col w-full space-y-8 scroll-mt-26">
-      <h2 className="heading">Featured Projects</h2>
+      <h2 className="heading">Personal Projects</h2>
       <div className="flex flex-col gap-8">
         {projects.data.map((project) => (
           <ProjectCard {...project} key={project.title} />
